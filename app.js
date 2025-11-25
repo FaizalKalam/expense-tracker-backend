@@ -29,8 +29,8 @@ app.use(cors({
 
 
 mongoose.connect(process.env.MONGO_URI)
-.then(() => console.log("MongoDB connected",process.env.MONGO_URI))
-.catch(err => console.log("MongoDB connection error:", err));
+.then(() => console.log("MongoDB connected"))
+.catch(err => console.log("MongoDB connection error:"));
 
 
 
@@ -42,7 +42,6 @@ app.use(errorHandler);
 
 app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
-    console.log("Loaded MONGO_URI:", process.env.MONGO_URI);
   });
 
 

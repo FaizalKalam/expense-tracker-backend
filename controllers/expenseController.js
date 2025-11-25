@@ -23,7 +23,7 @@ export const addExpense = async (req, res) => {
         });
     
         const savedExpense = await expense.save();
-        res.status(201).json(savedExpense); // ✅ single object
+        res.status(201).json(savedExpense); //  single object
       } catch (err) {
         res.status(400).json({ message: err.message });
       }
