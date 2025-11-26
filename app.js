@@ -16,7 +16,9 @@ app.use(express.json());
 const PORT = process.env.PORT||3000;
 
 app.use(cors({
-    origin: "http://localhost:4200", // Angular app
+    origin:[ "http://localhost:4200", // Angular app
+      "https://celadon-crisp-8fd4a3.netlify.app" //production
+    ], 
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"]
   }));
